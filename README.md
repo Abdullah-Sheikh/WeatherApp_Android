@@ -1,4 +1,17 @@
-# WeatherApp_Android
+# WeatherApp in Android 😊🚀
+
+
+
+
+Weather App using weatherbit.io Api. In this App user will enter the city name and gets the weather data of the provided city. Parse the response and show the following data in a well formatted design. 
+
+"City","country", "temperature", "weather_descriptions", "wind_speed", "wind_dir", "precip", "humidity"
+
+
+
+
+
+
 
 
 
