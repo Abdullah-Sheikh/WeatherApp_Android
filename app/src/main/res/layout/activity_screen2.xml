@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".Screen2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="backtoscreen1"
+            android:padding="6dp"
+            android:src="@drawable/back_icon"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Weather Info"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="22dp"
+            android:layout_weight="6.5"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="movetohistory"
+            android:padding="6dp"
+            android:src="@drawable/ic_history"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_weight="3.5"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        android:backgroundTint="#484DA2"
+        android:background="#484DA2"
+        android:layout_height="0dp">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/city_name_textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/poppins_medium"
+               android:text="Lahore"
+               android:textColor="@color/white"
+               android:textSize="34dp"
+               android:textStyle="bold"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.105"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.142" />
+
+           <TextView
+               android:id="@+id/country_name_textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="52dp"
+               android:text="Pakistan"
+               android:textColor="#E2B75B"
+               android:textSize="22dp"
+               app:layout_constraintEnd_toStartOf="@+id/imageView2"
+               app:layout_constraintHorizontal_bias="0.192"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/city_name_textView" />
+
+           <ImageView
+               android:id="@+id/imageView2"
+               android:layout_width="129dp"
+               android:layout_height="104dp"
+               android:padding="2dp"
+               android:src="@drawable/sun_img"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.838"
+               app:layout_constraintStart_toEndOf="@+id/city_name_textView"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.19" />
+
+           <TextView
+               android:id="@+id/temperature_textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="20dp"
+               android:fontFamily="@font/poppins_medium"
+               android:gravity="start|top"
+               android:text="10C"
+
+               android:textColor="#E2B75B"
+               android:textSize="44dp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/country_name_textView" />
+
+           <TextView
+               android:id="@+id/description_textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginBottom="28dp"
+               android:text="Sunny Day"
+               android:textColor="@color/white"
+               android:textSize="20dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="2">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="0.75"></View>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:background="?colorPrimaryVariant"
+            android:outlineProvider="background"
+            android:outlineSpotShadowColor="?colorOnSecondary"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_height="fill_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/wind_speed"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    tools:ignore="MissingConstraints"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="345.4"
+                    android:textSize="30dp"
+                    android:id="@+id/wind_speed_textView"
+                    android:fontFamily="@font/poppins_medium"
+
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#E2B75B"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="Wind Speed"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#484DA2"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:background="?colorPrimaryVariant"
+            android:outlineProvider="background"
+            android:outlineSpotShadowColor="?colorOnSecondary"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_height="fill_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/wind_direction"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    tools:ignore="MissingConstraints"></ImageView>
+
+                <TextView
+                    android:id="@+id/wind_direction_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="345.4"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/poppins_medium"
+
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#E2B75B"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="Wind Direction"
+                    android:maxLines="1"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#484DA2"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="2">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="0.75"></View>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:background="?colorPrimaryVariant"
+            android:outlineProvider="background"
+            android:outlineSpotShadowColor="?colorOnSecondary"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_height="fill_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/pressure"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    tools:ignore="MissingConstraints"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="345.4"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:id="@+id/pressure_textView"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#E2B75B"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="Pressure"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#484DA2"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:background="?colorPrimaryVariant"
+            android:outlineProvider="background"
+            android:outlineSpotShadowColor="?colorOnSecondary"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_height="fill_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/humidity"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    tools:ignore="MissingConstraints"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="345.4"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:id="@+id/humidity_textView"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#E2B75B"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="humidity"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#484DA2"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"></View>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"></View>
+
+
+</LinearLayout>

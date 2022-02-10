@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="15dp"
+    android:background="@color/white"
+    android:outlineSpotShadowColor="@android:color/darker_gray"
+    android:layout_height="185dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="?colorOnPrimary"
+        android:orientation="horizontal"
+
+        android:weightSum="10">
+
+
+        <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/course_imageview_id"
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_clouds"
+            />
+
+
+        <TextView
+            android:id="@+id/city_name_text_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_gravity="center_vertical|start"
+            android:gravity="center_vertical|start"
+            android:layout_weight="4.5"
+            android:text="City Name"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/temperature_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="2.25"
+            android:text="15 C"
+            android:textColor="#E2B75B"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="28dp"/>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:background="?colorOnPrimary"
+            android:orientation="horizontal"
+
+            android:weightSum="10">
+
+
+            <TextView
+                android:id="@+id/wind_speed_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="3.33"
+                android:text="Wind Speed"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/wind_dir_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="3.33"
+                android:text="Wind Speed"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/wind_pres_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="3.33"
+
+                android:text="pres "
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18dp"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+
+            android:layout_gravity="center_vertical|start"
+            android:gravity="center_vertical|start"
+            android:layout_weight="1.5"
+            android:textColor="#484DA2"
+            android:text="10/12/2022 "
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
