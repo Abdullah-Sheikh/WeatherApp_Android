@@ -3,13 +3,17 @@
 
 
 
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/62107887/153667104-82aaae66-6b9c-403d-89b7-544d72fbcab8.gif)
+
+
+
+
+
+
 Weather App using weatherbit.io Api. In this App user will enter the city name and gets the weather data of the provided city. Parse the response and show the following data in a well formatted design. 
 
 "City","country", "temperature", "weather_descriptions", "wind_speed", "wind_dir", "precip", "humidity"
-
-
-
-
 
 
 
